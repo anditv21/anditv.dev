@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald&display=swap");
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #151515;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+#hero img {
+  height: 100vh;
+  width: 100%;
+  background-position: absolute;
+  z-index: 10;
+  object-fit: cover;
+}
+
+#hero .content {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 45px;
+  width: 300px;
+
+  margin-bottom: 42px;
+}
+
+h1 i {
+  color: #00a2ff;
+}
+
+.dot {
+  color: #e80860;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 4px solid #121212;
+  max-width: 160px;
+  max-height: 160px;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+#clock {
+  border: 3px solid #fff;
+  padding: 10px 30px;
+  text-align: center;
+  max-width: 220px;
+  max-height: 220px;
+  margin-bottom: 5%;
+}
+
+.stats
+{
+  margin-left: 5%;
+}
+
+
+
+
+
+/* ===== Empty Box ===== */
+
+.box {
+  width: 20%;
+  height: 65vh;
+}
+
+.box-medium {
+  width: 20%;
+  height: 25vh;
+}
+
+
+.box-small {
+  width: 20%;
+  height: 9vh;
+}
+
+
+
+
+
+/* ===== Scroll down arrow ===== */
+
+.arrow {
+  max-width: 5%;
+  max-height: 5%;
+  position: relative;
+  animation: row 1s 1s infinite ease-out alternate;
+  -webkit-animation: arrow 1s 1s infinite ease-out alternate;
+}
+
+@keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 40px;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 40px;
+  }
+}
+
+.scroll-link svg {
+  color: white;
+}
+
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+  scrollbar-width: 3%;
+  scrollbar-color: #d400ff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d400ff;
+  border-radius: 10px;
+  border: 3px solid #d400ff;
+}
+
+/* | ===== Tooltip ===== | https://codepen.io/reiinii1/pen/aPGXEa */
+
+[data-tooltip] {
+  --arrow-size: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(150% + var(--arrow-size));
+  pointer-events: none;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 10px 18px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  width: -moz-max-content;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: rgba(59, 72, 80, 0.9);
+  background-image: linear-gradient(
+    30deg,
+    rgba(59, 72, 80, 0.44),
+    rgba(59, 68, 75, 0.44),
+    rgba(60, 82, 88, 0.44)
+  );
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
+}
+
+/* Tooltip arrow */
+[data-tooltip]:after {
+  content: "";
+  border-style: solid;
+  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size); /* CSS triangle */
+  border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  transition-duration: 0s;
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+
+/* 
+  Arrow slide down effect only on mouseenter (NOT on mouseleave)
+*/
+
+[data-tooltip]:hover:after {
+  transition-delay: 0.5s; /* Starting after the grow effect */
+  transition-duration: 0.2s;
+  transform: translateX(-50%) scaleY(1);
+}
