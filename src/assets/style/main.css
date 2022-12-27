@@ -68,14 +68,15 @@ a {
 }
 
 #clock {
+  color: #fff;
   border: 3px solid #fff;
   padding: 10px 30px;
   text-align: center;
   max-width: 220px;
   max-height: 220px;
   margin-bottom: 5%;
-}
 
+}
 .stats
 {
   margin-left: 5%;
@@ -103,15 +104,20 @@ a {
   height: 9vh;
 }
 
-
+.box-full {
+  height: 100vh;
+  width: 50%;
+}
 
 
 
 /* ===== Scroll down arrow ===== */
 
 .arrow {
-  max-width: 5%;
-  max-height: 5%;
+  max-width: 10%;
+  max-height: 10%;
+  min-width: 3%;
+  min-height: 3%;
   position: relative;
   animation: row 1s 1s infinite ease-out alternate;
   -webkit-animation: arrow 1s 1s infinite ease-out alternate;
@@ -135,9 +141,50 @@ a {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .arrow
+  {
+    min-width: 7%;
+    min-height: 7%;
+  }
+
+  @keyframes arrow {
+    0% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: 25px;
+    }
+  }
+  
+  @-webkit-keyframes arrow {
+    0% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: 25px;
+    }
+  }
+}
+
 .scroll-link svg {
   color: white;
 }
+
+a:hover
+{
+  color: white !important;
+}
+
+/* ===== Hide Selection ===== */
+::-moz-selection {
+  visibility: hidden;
+}
+
+::selection {
+  visibility: hidden;
+}
+
 
 /* ===== Scrollbar ===== */
 /* Firefox */
