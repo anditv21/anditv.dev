@@ -48,8 +48,10 @@ $(document).ready(function () {
           myAudio.pause();
           isPlaying = false;
       } else {
+          sleep(1000).then(() => {
           myAudio.play();
           isPlaying = true;
+          })
       }
   });
 });
