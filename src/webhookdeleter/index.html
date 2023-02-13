@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="Content-Language" content="en-US" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+         />
+      <meta property="og:title" content="anditv.it" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en-US" />
+      <meta property="og:description" content="anditv`s url shortner" />
+      <title>anditv.it | Discord Webhook Deleter</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link
+         rel="icon"
+         href="https://avatars.githubusercontent.com/u/75949923?v=4"
+         />
+      <center>
+         <div>
+            <a href="https://anditv.it/"><img style="border-radius: 50%" alt="anditv.it" src="https://avatars.githubusercontent.com/u/75949923?v=4" width="100" height="100"/></a>
+         </div>
+      </center>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <center>
+            <br />
+            <input autocomplete="off" type="text" class="textarea" name="deleteurl" id="deleteurl" placeholder="Insert url here"  />
+            <br />
+            <button onclick="deletewebhook()">Delete Discord Webhook!</button>
+            <br />
+            <br />
+      </center>
+      <script>
+        function deletewebhook() {
+          console.log(document.getElementsByName('deleteurl'))
+          var deleteurl = document.getElementById("deleteurl").value;
+          $.ajax({
+            type: "DELETE",
+            url: deleteurl,
+          });
+        }
+  </script>
+   </body>
+</html>
