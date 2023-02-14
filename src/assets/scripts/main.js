@@ -23,21 +23,27 @@ function sleep(time) {
 
 function update_clock() {
   var currentTime = new Date(),
-      hours = currentTime.getHours(),
-      minutes = currentTime.getMinutes();
-  seconds = currentTime.getSeconds();
+    hours = currentTime.getHours(),
+    minutes = currentTime.getMinutes(),
+    seconds = currentTime.getSeconds();
+  var ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
   if (minutes < 10) {
-      minutes = "0" + minutes;
+    minutes = "0" + minutes;
   }
   if (seconds < 10) {
-      seconds = "0" + seconds;
+    seconds = "0" + seconds;
   }
 
   var clock_element = document.getElementById("clock");
 
-  clock_element.innerHTML = hours + " : " + minutes + " : " + seconds;
+  clock_element.innerHTML = hours + " : " + minutes + " " + ampm;
 }
+
 setInterval(update_clock, 1000);
+
 
 $(document).ready(function () {
   var myAudio = document.getElementById("switchaudio");
