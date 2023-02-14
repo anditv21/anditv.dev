@@ -34,12 +34,13 @@
                     <div>
                         <label class="switch">
                             <input type="checkbox" id="audio-switch" />
-                            <span class="slider round"></span>
+                            <span class="slider round"></span>                           
                         </label>
                         <audio id="switchaudio">
                             <source src="assets/sound/ncs.mp3" type="audio/mp3" />
                         </audio>
                     </div>
+                    <h3 id="clock"></h3>
                     <a href="https://github.com/anditv21/anditv.it" target="_blank"><img class="avatar" src="https://avatars.githubusercontent.com/u/75949923?v=4" /></a>
                     <center>
                         <h1>anditv<i class="dot">.</i><i>it</i></h1>
@@ -56,14 +57,14 @@
                     <div>
                         <a data-tooltip="URL-Shortner" href="/short/"><i class="fas fa-cut"></i></a>
                         <a data-tooltip="My Projects" href="https://github.com/anditv21?tab=repositories" target="_blank"><i class="fas fa-briefcase"></i></a>
-                        <a data-tooltip="Discor Webhook Deleter" href="https://anditv.it/webhookdeleter/" target="_blank"><i class="fas fa-trash-alt"></i></a>
+                        <a data-tooltip="Discord Webhook Deleter" href="https://anditv.it/webhookdeleter/" target="_blank"><i class="fas fa-trash-alt"></i></a>
                     </div>
                     <br />
+                    <h3>Projects</h3>
                     <br />
                     <br />
-                    <center>
-                        <h3 id="clock"></h3>
-                    </center>
+
+                    
                     <a class="scroll-link" onclick="scrollto('projects');">
                         <svg style="max-width: 3%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow">
                             <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -76,17 +77,48 @@
         <section id="projects">
             <div>
                 <center>
-                    <h2>My current Projects</h2>
+                    <h2>My current main Projects</h2>
                     <br />
+
                     <a href="https://github.com/anditv21/panel/">
-                        <img style="max-width: 80%;" align="center" src="https://readme.anditv.it/api/pin/?username=anditv21&repo=panel&show_icons=true&bg_color=161B22" />
-                    </a>
-                    <a href="https://github.com/anditv21/schmandi/">
-                        <img style="max-width: 80%;" align="center" src="https://readme.anditv.it/api/pin/?username=anditv21&repo=schmandi&show_icons=true&bg_color=161B22" />
-                    </a>
+                        <div class="project-card">
+                          <h3 class="title"><i class="fas fa-code"></i> panel <div class="lines-of-code-container">
+                            <span class="lines-of-code-tag">lines</span>
+                            <span class="lines-of-code-number">67.1k</span>
+                          </div>
+                        </h3>
+                
+                          <div class="tag-container">
+                            <div class="tag open-source">Open-Source</div>
+                            <div class="tag php">PHP</div>
+                            <div class="tag js">JS</div>
+                          </div>
+                          <p class="description">🔧 User management panel with several themes & API Examples</p>
+                        </div>
+                      </a>
+                      <br>
+                      <a href="https://github.com/anditv21/panel/">
+                        <div class="project-card">
+                          <h3 class="title"><i class="fas fa-code"></i> floppa-utils <div class="lines-of-code-container">
+                            <span class="lines-of-code-tag">lines</span>
+                            <span class="lines-of-code-number">116.5k</span>
+                          </div>
+                        </h3>
+                
+                          <div class="tag-container">
+                            <div class="tag closed-source">closed-source</div>
+                            <div class="tag php">PHP</div>
+                            <div class="tag js">JS</div>
+                            <br>
+                            <div class="tag python">Python</div>
+                          </div>
+                          <p class="description">Websites & Bot of floppa.ink</p>
+                        </div>
+                      </a>
                 </center>
             </div>
-            <div class="box-medium"></div>
+            <br>
+            <center><div class="box-medium"></div></center>
             <br />
             <hr />
             <center>
