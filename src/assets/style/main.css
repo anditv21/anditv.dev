@@ -404,8 +404,8 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .project-card {
     border-radius: 0;
-    max-width: 80%;
-    min-width: 80% !important;
+    max-width: 900%;
+    min-width: 90% !important;
   }
 
   .title {
@@ -419,28 +419,28 @@ input:checked + .slider:before {
   }
 
   .tag {
-    font-size: small;
+    font-size: 12px;
   }
 
   #clock {
     color: #fff;
-    border: 3px solid #fff;
-    padding: 5px 10px 5px 10px;
+    border: 2px solid #fff;
+    padding: 4px 8px;
     text-align: center;
     height: auto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     white-space: nowrap;
     display: block;
     width: 100%;
-    max-width: 180px; 
+    max-width: 120px;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 14px;
     position: fixed;
-    top: 3%;
-    right: 5%;
-    margin-left: 10px; 
-    margin-right: 10px; 
-  }
+    top: 2%;
+    right: 1%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }  
 }
 
 
