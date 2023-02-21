@@ -55,3 +55,8 @@ $(document).ready(function () {
   setInterval(updateClock, 1000);
   addAudioToggleListener();
 });
+
+// scroll to into view
+function scrollto(element) {
+  document.getElementById(element).scrollIntoView({ behavior: "smooth" });
+}

@@ -27,52 +27,52 @@
       <script type="text/javascript" src="assets/scripts/main.js"></script>
    </head>
    <body onload="setCursor()" onclick="hitmarker()">
-    <section id="main">
-      <div id="hero">
-         <img class="giphy" src="assets/images/bg.webp" />
-         <div class="content d-flex align-items-center">
-            <div id="center" class="container text-center">
-               <div>
-                  <label class="switch">
-                  <input type="checkbox" id="audio-switch" />
-                  <span class="slider round"></span>                           
-                  </label>
-                  <audio id="switchaudio">
-                     <source src="assets/sound/ncs.mp3" type="audio/mp3" />
-                   </audio>                   
-               </div>
-               <h3 id="clock"></h3>
-               <a href="https://github.com/anditv21/anditv.it" target="_blank"><img class="avatar" src="https://avatars.githubusercontent.com/u/75949923?v=4" /></a>
-               <center>
-                  <h1>anditv<i class="dot">.</i><i>it</i></h1>
-               </center>
-               <div class="btn-group btn-group-sm">
-                  <a data-tooltip="anditv21@icloud.com" target="_blank" href="mailto:anditv21@icloud.com">
-                  <i class="fa-solid fa-envelope"></i>
+      <section id="main">
+         <div id="hero">
+            <img class="giphy" src="assets/images/bg.webp" />
+            <div class="content d-flex align-items-center">
+               <div id="center" class="container text-center">
+                  <div>
+                     <label class="switch">
+                     <input type="checkbox" id="audio-switch" />
+                     <span class="slider round"></span>                           
+                     </label>
+                     <audio id="switchaudio">
+                        <source src="assets/sound/ncs.mp3" type="audio/mp3" />
+                     </audio>
+                  </div>
+                  <h3 id="clock"></h3>
+                  <a href="https://github.com/anditv21/anditv.it" target="_blank"><img class="avatar" src="https://avatars.githubusercontent.com/u/75949923?v=4" /></a>
+                  <center>
+                     <h1>anditv<i class="dot">.</i><i>it</i></h1>
+                  </center>
+                  <div class="btn-group btn-group-sm">
+                     <a data-tooltip="anditv21@icloud.com" target="_blank" href="mailto:anditv21@icloud.com">
+                     <i class="fa-solid fa-envelope"></i>
+                     </a>
+                     &nbsp;
+                     <a data-tooltip="anditv21#3900" href="https://discord.com/users/854024514781315082/" target="_blank"><i class="fab fa-discord"></i></a>
+                     &nbsp;
+                     <a data-tooltip="My Steam" href="https://steamcommunity.com/id/anditv21/" target="_blank"><i class="fab fa-steam"></i></a>
+                  </div>
+                  <div>
+                     <a data-tooltip="URL-Shortner" href="/short/"><i class="fas fa-cut"></i></a>
+                     <a data-tooltip="My Projects" href="https://github.com/anditv21?tab=repositories" target="_blank"><i class="fas fa-briefcase"></i></a>
+                     <a data-tooltip="Discord Webhook Deleter" href="https://anditv.it/webhookdeleter/" target="_blank"><i class="fas fa-trash-alt"></i></a>
+                  </div>
+                  <br />
+                  <h3>Projects</h3>
+                  <br />
+                  <br />
+                  <a class="scroll-link" onclick="scrollto('projects');">
+                     <svg style="max-width: 3%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow">
+                        <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                     </svg>
                   </a>
-                  &nbsp;
-                  <a data-tooltip="anditv21#3900" href="https://discord.com/users/854024514781315082/" target="_blank"><i class="fab fa-discord"></i></a>
-                  &nbsp;
-                  <a data-tooltip="My Steam" href="https://steamcommunity.com/id/anditv21/" target="_blank"><i class="fab fa-steam"></i></a>
                </div>
-               <div>
-                  <a data-tooltip="URL-Shortner" href="/short/"><i class="fas fa-cut"></i></a>
-                  <a data-tooltip="My Projects" href="https://github.com/anditv21?tab=repositories" target="_blank"><i class="fas fa-briefcase"></i></a>
-                  <a data-tooltip="Discord Webhook Deleter" href="https://anditv.it/webhookdeleter/" target="_blank"><i class="fas fa-trash-alt"></i></a>
-               </div>
-               <br />
-               <h3>Projects</h3>
-               <br />
-               <br />
-               <a class="scroll-link" onclick="scrollto('projects');">
-                  <svg style="max-width: 3%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow">
-                     <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-               </a>
             </div>
          </div>
-      </div>
-    </section>
+      </section>
       <div class="box-full"></div>
       <section id="projects">
          <div>
@@ -103,7 +103,7 @@
                         <i class="fas fa-code"></i> floppa-utils 
                         <div class="lines-of-code-container">
                            <span class="lines-of-code-tag">lines</span>
-                           <span class="lines-of-code-number">116.5k</span>
+                           <span class="lines-of-code-number">97.8k</span>
                         </div>
                      </h3>
                      <div class="tag-container">
@@ -122,13 +122,12 @@
          <center>
             <div class="box-small"></div>
             <a class="scroll-link" onclick="scrollto('main');">
-               <svg style="max-width: 1%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow" transform="rotate(180)">
+               <svg style="max-width: 1%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow arrow-up">
                   <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                </svg>
             </a>
             <p>Scroll back to Top</p>
          </center>
-         <br />
          <hr />
          <center>
             This page is built with
@@ -137,14 +136,13 @@
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40" />
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="40" height="40" />
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" />
+           and
+            <img src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ny41IDQ3LjUiPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZD0iTTAgMzhoMzhWMEgwdjM4WiIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNhKSIgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgMCA0Ny41KSI+PHBhdGggZmlsbD0iI2RkMmU0NCIgZD0iTTMuMDY3IDI1LjY4YzAgOC43OTkgMTIuMTg0IDEyLjA2IDE1LjkzMyAxLjg3NCAzLjc0OSAxMC4xODYgMTUuOTMzIDYuOTI1IDE1LjkzMy0xLjg3NEMzNC45MzMgMTYuMTIgMTkgMy45OTkgMTkgMy45OTlTMy4wNjcgMTYuMTIgMy4wNjcgMjUuNjgiLz48L2c+PC9zdmc+" alt="heart" width="40" height="40" />
+            in
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADaCAYAAADXGps7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALtSURBVHhe7dQxUUMBEEDBs5AyzW/TMoMOJt4wwNDjAyTEQSi/g4uQt8Va2LlcjwUoEiCQNb/v9wUomsfcFqBIgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGTN8/N7AYrmPM8FKBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWfP/9bMARfOY2wIUCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIEsAQJZAgSyBAhkCRDIEiCQJUAgS4BAlgCBLAECWQIEsgQIZAkQyBIgkCVAIEuAQJYAgSwBAlkCBLIECGQJEMgSIJAlQCBLgECWAIGs+Xv7WICiuVyPBSgSIBB17AumdPtUGAJ76QAAAABJRU5ErkJggg==" alt="austria" width="60" height="40" />
          </center>
-         <div class="box-small"></div>
+         <div class="box-x-small"></div>
       </section>
       <audio id="audio" src="assets/sound/hitmarker.mp3"></audio>
-      <script>
-         function scrollto(element) {
-             document.getElementById(element).scrollIntoView({ behavior: "smooth" });
-         }
-      </script>
    </body>
 </html>

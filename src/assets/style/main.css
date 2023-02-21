@@ -81,7 +81,8 @@ a {
 
 .box,
 .box-medium,
-.box-small {
+.box-small,
+.box-x-small {
   width: 20%;
 }
 
@@ -96,48 +97,69 @@ a {
 .box-small {
   height: 9vh;
 }
+.box-x-small {
+  height: 2vh;
+}
 
 .box-full {
   height: 100vh;
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .box-small {
+    height: 1vh;
+  }
+}
+
 /* ===== Scroll down arrow ===== */
 
-.arrow {
+.arrow,
+.arrow-up {
   width: 8%;
   height: 8%;
-  min-width: 1%;
-  min-height: 1%;
   position: relative;
+}
+
+.arrow {
+  min-width: 3%;
+  min-height: 3%;
   animation: arrow 1s infinite ease-out alternate;
+}
+
+.arrow-up {
+  min-width: 2%;
+  min-height: 2%;
+  animation: arrow-up 1s infinite ease-out alternate;
+}
+
+@media (max-width: 767px) {
+  .arrow,
+  .arrow-up {
+    min-width: 5%;
+    min-height: 5%;
   }
-  
-  @keyframes arrow {
+}
+
+@keyframes arrow {
   0% {
-  bottom: 0px;
+    bottom: 0px;
   }
   100% {
-  bottom: 40px;
+    bottom: 40px;
   }
+}
+
+@keyframes arrow-up {
+  0% {
+    bottom: 32px;
+    transform: rotate(180deg);
   }
-  
-  @media only screen and (max-width: 500px) {
-    .arrow {
-      min-width: 5%;
-      min-height: 5%;
-    }
-  
-    @keyframes arrow {
-      0% {
-        bottom: 0px;
-      }
-      100% {
-        bottom: 25px;
-      }
-    }
+  100% {
+    bottom: 0px;
+    transform: rotate(180deg);
   }
-  
+}
 
 .scroll-link svg {
   color: white;
@@ -159,7 +181,6 @@ a:hover {
   font-size: 18px;
   display: inline-block;
 }
-
 
 .slider.round {
   border-radius: 34px;
@@ -391,22 +412,22 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .project-card {
     border-radius: 0;
-    max-width: 900%;
-    min-width: 90% !important;
+    max-width: 80%;
+    min-width: 70% !important;
   }
 
   .title {
     font-weight: normal;
-    font-size: medium;
+    font-size: small;
   }
 
   .description {
     font-weight: normal;
-    font-size: medium;
+    font-size: small;
   }
 
   .tag {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   #clock {
