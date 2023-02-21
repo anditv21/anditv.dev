@@ -105,10 +105,10 @@ a {
 /* ===== Scroll down arrow ===== */
 
 .arrow {
-  width: 10%;
-  height: 10%;
-  min-width: 3%;
-  min-height: 3%;
+  width: 8%;
+  height: 8%;
+  min-width: 1%;
+  min-height: 1%;
   position: relative;
   animation: arrow 1s infinite ease-out alternate;
   }
@@ -124,8 +124,8 @@ a {
   
   @media only screen and (max-width: 500px) {
     .arrow {
-      min-width: 10%;
-      min-height: 10%;
+      min-width: 5%;
+      min-height: 5%;
     }
   
     @keyframes arrow {
