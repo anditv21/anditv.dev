@@ -31,26 +31,32 @@ function updateClock() {
   const ampm = currentTime.getHours() >= 12 ? "pm" : "am";
   const clockElement = document.getElementById("clock");
   clockElement.textContent = `${hours} : ${minutes} ${ampm}`;
+  requestAnimationFrame(updateClock);
 }
 
 // add event listener to audio toggle button
 function addAudioToggleListener() {
   const audioElement = document.getElementById("switchaudio");
   let isPlaying = false;
-  $(".round").click(async function () {
-    if (isPlaying) {
-      audioElement.pause();
-      isPlaying = false;
-    } else {
-      await sleep(1000);
-      playAudio(audioElement);
-      isPlaying = true;
+  const roundParent = document.getElementById("main");
+  roundParent.addEventListener("click", async (event) => {
+    const roundElement = event.target.closest(".round");
+    if (roundElement) {
+      if (isPlaying) {
+        audioElement.pause();
+        isPlaying = false;
+      } else {
+        await sleep(1000);
+        playAudio(audioElement);
+        isPlaying = true;
+      }
     }
   });
 }
 
+
 // run functions on DOM load
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   setCursor();
   setInterval(updateClock, 1000);
   addAudioToggleListener();

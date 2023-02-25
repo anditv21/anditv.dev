@@ -114,14 +114,10 @@ a {
 
 /* ===== Scroll down arrow ===== */
 
-.arrow,
-.arrow-up {
+.arrow, .arrow-up {
   width: 8%;
   height: 8%;
   position: relative;
-}
-
-.arrow {
   min-width: 3%;
   min-height: 3%;
   animation: arrow 1s infinite ease-out alternate;
@@ -134,8 +130,7 @@ a {
 }
 
 @media (max-width: 767px) {
-  .arrow,
-  .arrow-up {
+  .arrow, .arrow-up {
     min-width: 5%;
     min-height: 5%;
   }
@@ -169,6 +164,7 @@ a:hover {
   color: white !important;
 }
 
+
 /* ===== music switch ===== */
 #button-text {
   color: #d9ddde;
@@ -180,14 +176,6 @@ a:hover {
   text-indent: 12em;
   font-size: 18px;
   display: inline-block;
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 .switch {
@@ -213,8 +201,8 @@ a:hover {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 34px;
 }
 
 .slider:before {
@@ -225,8 +213,8 @@ a:hover {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -241,22 +229,35 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Hide selection */
-::-moz-selection {
-  /* Code for Firefox */
+.align-items-center,
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  margin-right: 10px;
+}
+
+.container span {
+  margin: 0 10px;
+}
+
+
+/* | ===== Selection ===== | */
+
+::-moz-selection, ::selection {
   visibility: hidden;
 }
 
-::selection {
-  visibility: hidden;
-}
-
-/* ===== Scrollbar ===== */
+/* | ===== Scrollbar ===== | */
 
 * {
   scrollbar-width: 3%;
   scrollbar-color: #d400ff;
 }
+
 *::-webkit-scrollbar {
   width: 8px;
 }
@@ -284,7 +285,7 @@ input:checked + .slider:before {
   left: 50%;
   bottom: calc(150% + var(--arrow-size));
   pointer-events: none;
-  transition: 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
   will-change: transform;
 }
 
@@ -313,12 +314,13 @@ input:checked + .slider:before {
 }
 
 /* Tooltip arrow */
+
 [data-tooltip]:after {
   content: "";
   border-style: solid;
-  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size); /* CSS triangle */
+  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size);
   border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
-  transition-duration: 0s;
+  transition: transform 0.2s;
   transform-origin: top;
   transform: translateX(-50%) scaleY(0);
 }
@@ -336,13 +338,12 @@ input:checked + .slider:before {
   transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
 }
 
-/* 
+/*
   Arrow slide down effect only on mouseenter (NOT on mouseleave)
-*/
+  */
 
 [data-tooltip]:hover:after {
   transition-delay: 0.5s; /* Starting after the grow effect */
-  transition-duration: 0.2s;
   transform: translateX(-50%) scaleY(1);
 }
 
@@ -352,7 +353,6 @@ input:checked + .slider:before {
   border-radius: 10px;
   color: white;
   padding: 20px;
-  width: -moz-fit-content;
   width: fit-content;
   max-width: 20%;
   min-width: 20% !important;
@@ -378,13 +378,11 @@ input:checked + .slider:before {
 .tag-container {
   display: flex;
   margin-bottom: 20px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
 .tag {
   border-radius: 5px;
-  color: white;
   font-weight: bold;
   padding: 5px 10px;
   text-transform: uppercase;
@@ -396,53 +394,10 @@ input:checked + .slider:before {
 
 .closed-source {
   background-color: rgba(244, 63, 94);
-  margin-right: 3%;
 }
 
 .open-source {
   background-color: rgb(22, 163, 74);
-  margin-right: 3%;
-}
-
-.description {
-  font-size: small;
-  color: rgb(150, 150, 150);
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    border-radius: 0;
-    max-width: 80%;
-    min-width: 70% !important;
-  }
-
-  .title {
-    font-weight: normal;
-    font-size: small;
-  }
-
-  .description {
-    font-weight: normal;
-    font-size: small;
-  }
-
-  .tag {
-    font-size: 8px;
-  }
-
-  #clock {
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 4px 8px;
-    text-align: center;
-    font-size: 14px;
-    position: fixed;
-    top: 2%;
-    right: 1%;
-    max-width: 120px;
-    box-sizing: border-box;
-    margin: 0 5px 3% 5px;
-  }
 }
 
 .js {
@@ -468,6 +423,43 @@ input:checked + .slider:before {
 .css {
   background-color: rgba(86, 61, 124);
   color: white;
+}
+
+.description {
+  font-size: small;
+  color: rgb(150, 150, 150);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    border-radius: 0;
+    max-width: 80%;
+    min-width: 70% !important;
+  }
+
+  .title,
+  .description {
+    font-weight: normal;
+    font-size: small;
+  }
+
+  .tag {
+    font-size: 8px;
+  }
+
+  #clock {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    max-width: 120px;
+    box-sizing: border-box;
+    margin: 0 5px 3% 5px;
+  }
 }
 
 /* | ===== Lines of code ===== | */
@@ -498,3 +490,5 @@ input:checked + .slider:before {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
+
