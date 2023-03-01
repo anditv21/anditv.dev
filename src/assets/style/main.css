@@ -118,8 +118,8 @@ a {
   width: 8%;
   height: 8%;
   position: relative;
-  min-width: 3%;
-  min-height: 3%;
+  min-width: 8%;
+  min-height: 8%;
   animation: arrow 1s infinite ease-out alternate;
 }
 
