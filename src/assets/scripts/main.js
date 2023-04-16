@@ -66,3 +66,5 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollto(element) {
   document.getElementById(element).scrollIntoView({ behavior: "smooth" });
 }
+
+

@@ -34,14 +34,8 @@
                      <a href="https://github.com/anditv21/anditv.it" target="_blank"><img class="avatar" src="assets/images/avatar.webp" alt="avatar" /></a>
                      <h1>anditv<i class="dot">.</i><i>it</i></h1>
                      <div class="btn-group btn-group-sm">
-                        <a data-tooltip="anditv21@icloud.com" target="_blank" href="mailto:anditv21@icloud.com">
-                        <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <a data-tooltip="anditv21#3900" href="https://discord.com/users/854024514781315082/" target="_blank"><i class="fab fa-discord"></i></a>
                         <a data-tooltip="Speedtest" href="https://speedtest.anditv.it/" target="_blank"><i class="fas fa-tachometer-alt"></i></a>
-                        <br>
                         <a data-tooltip="URL-Shortner" href="/short/"><i class="fas fa-cut"></i></a>
-                        <a data-tooltip="My Projects" href="https://github.com/anditv21?tab=repositories" target="_blank"><i class="fas fa-briefcase"></i></a>
                         <a data-tooltip="Discord Webhook Deleter" href="https://anditv.it/webhookdeleter/" target="_blank"><i class="fas fa-trash-alt"></i></a>
                      </div>
                      <br />
@@ -62,7 +56,7 @@
       <section id="projects">
          <div>
             <center>
-               <h2>My current main Projects</h2>
+               <h2>My main Projects</h2>
                <br />
                <a href="https://github.com/anditv21/panel/">
                   <div class="project-card">
@@ -78,6 +72,7 @@
                         <div class="tag php">PHP</div>
                         <div class="tag js">JS</div>
                      </div>
+                     <i class="far fa-star"></i> <span id="star-count"></span>
                      <p class="description">🔧 User management panel with several themes & API Examples</p>
                   </div>
                </a>
@@ -135,6 +130,18 @@
       </section>
       <audio id="audio" src="assets/sound/hitmarker.mp3"></audio>
       <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/all.js" integrity="sha384-l+HksIGR+lyuyBo1+1zCBSRt6v4yklWu7RbG0Cv+jDLDD9WFcEIwZLHioVB4Wkau" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="assets/scripts/main.js"></script>
+      <script defer="" type="text/javascript" src="assets/scripts/main.js"></script>
+      <script>
+         //print github repo star count
+         const apiUrl = "https://api.github.com/repos/anditv21/panel";
+         fetch(apiUrl)
+         .then((response) => response.json())
+         .then((data) => {
+            document.getElementById("star-count").textContent = `${data.stargazers_count}`;
+         })
+         .catch((error) => {
+            console.error(error);
+         });
+      </script>
    </body>
 </html>
