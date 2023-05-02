@@ -46,7 +46,7 @@ function addAudioToggleListener() {
         audioElement.pause();
         isPlaying = false;
       } else {
-        await sleep(1000);
+        await sleep(800);
         playAudio(audioElement);
         isPlaying = true;
       }

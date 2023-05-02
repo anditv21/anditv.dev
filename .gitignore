@@ -1,8 +1,5 @@
-/api
-/panel
 /pihole
-/admin
-/transcript
 /error_docs
-/short
-
+src/sites/admin
+src/sites/panel
+src/sites/short/

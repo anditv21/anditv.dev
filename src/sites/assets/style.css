@@ -1,0 +1,32 @@
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  }
+  
+  button,
+  input[type="submit"] {
+    background-color: #515251;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(26, 26, 26);
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
