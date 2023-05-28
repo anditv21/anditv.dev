@@ -29,7 +29,7 @@ function securevar($var)
     <meta property="og:title" content="anditv.it">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en-US">
-    <meta property="og:description" content="anditv's URL shortener">
+    <meta property="og:description" content="anditv's IP-Info">
     <title>anditv.it | IP-Info</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/75949923?v=4">
     <link rel="stylesheet" href="../assets/style.css">
@@ -53,7 +53,7 @@ function securevar($var)
         <?php
         require_once('ip_info.php');
         if (isset($_GET['ip_address'])) {
-            $ip_address = $_GET['ip_address'];
+            $ip_address = securevar($_GET['ip_address']);
             $ip_info = getipinfo($ip_address);
             echo "<table style='margin: 0 auto;'>";
             foreach ($ip_info as $key => $value) {
