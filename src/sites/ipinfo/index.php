@@ -53,7 +53,7 @@ function securevar($var)
         <?php
         require_once('ip_info.php');
         if (isset($_GET['ip_address'])) {
-            $ip_address = $_GET['ip_address'];
+            $ip_address = securevar($_GET['ip_address']);
             $ip_info = getipinfo($ip_address);
             echo "<table style='margin: 0 auto;'>";
             foreach ($ip_info as $key => $value) {
