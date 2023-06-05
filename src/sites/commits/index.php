@@ -4,9 +4,15 @@
 <head>
   <link rel="stylesheet" href="assets/styles/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel-Commits</title>
 </head>
 
 <body>
+  <center>
+    <h3>View <a style="color: white;" target="_blank" href="https://github.com/dev-hoehle/simple-commit-log">this project</a> or the
+      <a style="color: white;" target="_blank" href="https://github.com/anditv21/panel">panel</a> on GitHub
+    </h3>
+  </center>
   <table>
     <tr>
       <th>Author</th>
