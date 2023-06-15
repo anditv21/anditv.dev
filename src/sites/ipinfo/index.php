@@ -26,19 +26,19 @@ function securevar($var)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:title" content="anditv.it">
+    <meta property="og:title" content="anditv.dev">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en-US">
     <meta property="og:description" content="anditv's IP-Info">
-    <title>anditv.it | IP-Info</title>
+    <title>anditv.dev | IP-Info</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/75949923?v=4">
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
     <div>
         <center>
-            <a href="https://anditv.it/">
-                <img style="border-radius: 50%" alt="anditv.it" src="https://avatars.githubusercontent.com/u/75949923?v=4" width="100" height="100">
+            <a href="https://anditv.dev/">
+                <img style="border-radius: 50%" alt="anditv.dev" src="https://avatars.githubusercontent.com/u/75949923?v=4" width="100" height="100">
             </a>
         </center>
     </div>
