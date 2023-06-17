@@ -3,12 +3,12 @@
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="Content-Language" content="en-US" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta property="og:url" content="index.html" />
       <meta property="og:title" content="anditv.dev" />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en-US" />
-      <meta property="og:description" content="anditv`s website" />
+      <meta property="og:description" content="anditv's website" />
       <meta name="Description" content="Personal website of anditv21" />
       <meta name="theme-color" content="#00d9ff" />
       <title>anditv.dev | Home</title>
@@ -22,7 +22,7 @@
             <div class="content align-items-center">
                <div class="main" id="center">
                   <label for="audio-switch" class="switch">
-                     <input type="checkbox" id="audio-switch" />
+                     <input type="checkbox" id="audio-switch" aria-label="Audio Switch" />
                      <span class="slider round"></span>                           
                   </label>
                   <audio loop id="switchaudio">
@@ -31,21 +31,21 @@
                   
                   <h3 id="clock"></h3>
                   <center>
-                     <a href="https://github.com/anditv21/anditv.dev" target="_blank"><img class="avatar" src="assets/images/avatar.webp" alt="avatar" /></a>
-                     <h1>anditv<i class="dot">.</i><i>it</i></h1>
+                     <a href="https://github.com/anditv21/anditv.dev" target="_blank" aria-label="GitHub Link"><img class="avatar" src="assets/images/avatar.webp" alt="avatar" /></a>
+                     <h1>anditv<i class="dot">.</i><i>dev</i></h1>
                      <div class="btn-group btn-group-sm">
-                        <a data-tooltip="Speedtest" href="https://speedtest.anditv.dev/" target="_blank"><i class="fas fa-tachometer-alt"></i></a>
-                        <a data-tooltip="IP-Info" href="/sites/ipinfo/"><i class="fas fa-info"></i></a>
+                        <a data-tooltip="Speedtest" href="https://speedtest.anditv.dev/" target="_blank" aria-label="Speedtest Link"><i class="fas fa-tachometer-alt"></i></a>
+                        <a data-tooltip="IP-Info" href="/sites/ipinfo/" aria-label="IP-Info Link"><i class="fas fa-info"></i></a>
                         <br>
-                        <a data-tooltip="Discord Webhook Deleter" href="/sites/webhookdeleter/"><i class="fas fa-trash-alt"></i></a>
-                        <a data-tooltip="URL Shortner" href="/short/"><i class="fas fa-cut"></i></a>
+                        <a data-tooltip="Discord Webhook Deleter" href="/sites/webhookdeleter/" aria-label="Webhook Deleter Link"><i class="fas fa-trash-alt"></i></a>
+                        <a data-tooltip="URL Shortner" href="/short/" aria-label="URL Shortner Link"><i class="fas fa-cut"></i></a>
                         <br>
                      </div>
                      <br />
                      <h3>Projects</h3>
                      <br />
                      <br />
-                     <a class="scroll-link" onclick="scrollto('projects');">
+                     <a class="scroll-link" onclick="scrollto('projects');" aria-label="Scroll to Projects">
                         <svg style="max-width: 3%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow">
                            <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                         </svg>
@@ -104,7 +104,7 @@
          <br>          
          <center>
             <div class="box-small"></div>
-            <a class="scroll-link" onclick="scrollto('main');">
+            <a class="scroll-link" onclick="scrollto('main');" aria-label="Scroll to Top">
                <svg style="max-width: 1%; opacity: 1;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="arrow arrow-up">
                   <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                </svg>
@@ -132,7 +132,7 @@
          <div class="box-x-small"></div>
       </section>
       <audio id="audio" src="assets/sound/hitmarker.mp3"></audio>
-      <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/all.js" integrity="sha384-l+HksIGR+lyuyBo1+1zCBSRt6v4yklWu7RbG0Cv+jDLDD9WFcEIwZLHioVB4Wkau" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/1ec9c88c94.js" crossorigin="anonymous"></script>
       <script defer="" type="text/javascript" src="assets/scripts/main.js"></script>
       <script>
          //print github repo star count
