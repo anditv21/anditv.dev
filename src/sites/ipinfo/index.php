@@ -1,4 +1,13 @@
 <?php
+require_once('ip_info.php');
+$ogDescription = "IP-Info";
+
+if (isset($_GET['ip_address'])) {
+    $ip_address = securevar($_GET['ip_address']);
+    $ip_info = getipinfo($ip_address);
+    $ogDescription = "IP info for " . securevar($ip_address);
+}
+
 function securevar($var)
 {
     if (empty($var)) {
@@ -21,6 +30,7 @@ function securevar($var)
     }
 }
 ?>
+
 <html lang="en">
 
 <head>
@@ -29,11 +39,29 @@ function securevar($var)
     <meta property="og:title" content="anditv.dev">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en-US">
-    <meta property="og:description" content="anditv's IP-Info">
+    <meta property="og:description" content="<?php echo $ogDescription; ?>">
+    <meta name="theme-color" content="#00d9ff" />
     <title>anditv.dev | IP-Info</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/75949923?v=4">
     <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: rgb(26, 26, 26);
+        }
+    </style>
 </head>
+
 <body>
     <div>
         <center>
@@ -51,7 +79,6 @@ function securevar($var)
         </form>
         <br>
         <?php
-        require_once('ip_info.php');
         if (isset($_GET['ip_address'])) {
             $ip_address = securevar($_GET['ip_address']);
             $ip_info = getipinfo($ip_address);
@@ -69,21 +96,5 @@ function securevar($var)
         ?>
     </center>
 </body>
-<style>
-    table {
-        border-collapse: collapse;
-    }
-
-    th,
-    td {
-        text-align: left;
-        padding: 8px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    th {
-        background-color: rgb(26, 26, 26);
-    }
-</style>
 
 </html>
