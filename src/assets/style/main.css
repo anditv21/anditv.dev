@@ -86,42 +86,7 @@ a {
   right: 5%;
 }
 
-/* ===== Empty Box ===== */
-
-.box,
-.box-medium,
-.box-small,
-.box-x-small {
-  width: 20%;
-}
-
-.box {
-  height: 65vh;
-}
-
-.box-medium {
-  height: 25vh;
-}
-
-.box-small {
-  height: 9vh;
-}
-.box-x-small {
-  height: 2vh;
-}
-
-.box-full {
-  height: 100vh;
-  width: 100%;
-}
-
-@media (max-width: 767px) {
-  .box-small {
-    height: 1vh;
-  }
-}
-
-/* ===== Scroll down arrow ===== */
+/* ===== Scroll arrows ===== */
 
 .arrow,
 .arrow-up {
@@ -136,7 +101,7 @@ a {
 .arrow-up {
   min-width: 2%;
   min-height: 2%;
-  animation: arrow-up 1s infinite ease-out alternate;
+  animation: arrow-up 0.5s infinite ease-out alternate;
 }
 
 @media (max-width: 767px) {
@@ -158,11 +123,11 @@ a {
 
 @keyframes arrow-up {
   0% {
-    bottom: 32px;
+    bottom: 3px;
     transform: rotate(180deg);
   }
   100% {
-    bottom: 0px;
+    bottom: 20px;
     transform: rotate(180deg);
   }
 }
