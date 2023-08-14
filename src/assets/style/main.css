@@ -102,6 +102,7 @@ a {
   min-width: 2%;
   min-height: 2%;
   animation: arrow-up 0.5s infinite ease-out alternate;
+  padding-bottom: 5%;
 }
 
 @media (max-width: 767px) {
@@ -334,11 +335,32 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
+#invisible-box::before {
+  content: "";
+  display: block;
+  height: 15vh; 
+}
+
+
+#invisible-box h2,
+#invisible-box .project-card {
+  position: relative;
+  z-index: 2; 
+}
+
+
+#invisible-box::after {
+  content: "";
+  display: block;
+  height: 15vh; 
+}
+
 .title {
   font-weight: normal;
   font-size: medium;
   margin-bottom: 20px;
 }
+
 
 .title a {
   color: white;
