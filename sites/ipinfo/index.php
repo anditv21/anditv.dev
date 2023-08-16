@@ -42,8 +42,13 @@ function securevar($var)
     <meta property="og:description" content="<?php echo $ogDescription; ?>">
     <meta name="theme-color" content="#00d9ff" />
     <title>anditv.dev | IP-Info</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/75949923?v=4">
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="icon" href="../../assets/images/favicon.ico">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <style>
         table {
             border-collapse: collapse;
@@ -59,17 +64,35 @@ function securevar($var)
         th {
             background-color: rgb(26, 26, 26);
         }
+
+        body
+        {
+            color: white !important;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <center>
-            <a href="https://anditv.dev/">
-                <img style="border-radius: 50%" alt="anditv.dev" src="https://avatars.githubusercontent.com/u/75949923?v=4" width="100" height="100">
-            </a>
-        </center>
+<div>
+      <div class="container">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link nav-link-new" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="https://anditv.dev/short/" target="_blank" class="nav-link nav-link-new">URL-Shortener</a></li>
+                <li class="nav-item"><a href="https://anditv.dev/sites/ipinfo/" target="_blank" class="nav-link active">IP-Info</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle nav-link-new" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item nav-link-new" target="_blank" href="https://anditv.dev/sites/webhookdeleter/">Discord Webhook Deleter</a></li>
+                        <li><a class="dropdown-item nav-link-new" target="_blank" href="https://speedtest.anditv.dev/">Speedtest</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
     </div>
+    <center>
+        <div class="me-container"> <a href="https://anditv.dev/" target="_blank" aria-label="GitHub Link"><img class="avatar" src="../../assets/images/avatar.webp" alt="avatar" /></a>
+        </div>
+    </center>
     <center>
         <br>
         <form method="GET" action="">
