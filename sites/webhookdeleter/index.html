@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="anditv.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:description" content="Discord Webhook Deleter">
+    <meta name="theme-color" content="#00d9ff" />
+    <title>anditv.dev | Discord Webhook Deleter</title>
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="icon" href="../../assets/images/favicon.ico">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link nav-link-new" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="https://anditv.dev/short/" target="_blank" class="nav-link nav-link-new">URL-Shortener</a></li>
+                <li class="nav-item"><a href="https://anditv.dev/sites/ipinfo/" target="_blank" class="nav-link nav-link-new">IP-Info</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle nav-link-new" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item nav-link-new" target="_blank" href="https://anditv.dev/sites/webhookdeleter/">Discord Webhook Deleter</a></li>
+                        <li><a class="dropdown-item nav-link-new" target="_blank" href="https://speedtest.anditv.dev/">Speedtest</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <center>
+        <div class="me-container"> <a href="https://anditv.dev/" target="_blank" aria-label="GitHub Link"><img class="avatar" src="../../assets/images/avatar.webp" alt="avatar" /></a>
+        </div>
+    </center>
+    <center>
+      <br>
+      <input autocomplete="off" type="text" class="textarea" name="deleteurl" id="deleteurl" placeholder="Insert URL here">
+      <br>
+      <button class="send" onclick="deletewebhook()">Delete Discord Webhook!</button>
+      <br>
+      <br>
+      <p style="color: white;">What is a <a style="color:aqua;" href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks" target="_blank">discord webhook?</a></p>
+    </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function deletewebhook() {
+        console.log(document.getElementsByName('deleteurl'));
+        var deleteurl = document.getElementById("deleteurl").value;
+        $.ajax({
+          type: "DELETE",
+          url: deleteurl
+        });
+      }
+    </script>
+  </body>
+</html>
