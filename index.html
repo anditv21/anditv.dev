@@ -15,7 +15,8 @@
     <title>anditv.dev | Home</title>
     <link rel="stylesheet" href="assets/styles/main.css" />
     <link rel="icon" href="assets/images/favicon.ico">
-
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
@@ -49,14 +50,14 @@
         <h2>My main Projects</h2> <br> <a href="https://anditv.dev/sites/commits/"> </a>
         <div class="project-card" tabindex="10"><a href="https://anditv.dev/sites/commits/"> </a>
             <h3 class="title"><a href="https://anditv.dev/sites/commits/"> <i class="fas fa-code" aria-hidden="true"></i> panel </a><a target="_blank" href="https://github.com/anditv21/panel/blob/main/count.py#L1"></a>
-                <div class="lines-of-code-container"><a target="_blank" href="https://github.com/anditv21/panel/blob/main/count.py#L1"> <span class="lines-of-code-tag">lines</span> <span class="lines-of-code-number">19.5k</span></a> </div>
+                <div class="lines-of-code-container"><a target="_blank" href="https://github.com/anditv21/panel/blob/main/count.py#L1"> <span class="lines-of-code-tag">lines</span> <span class="lines-of-code-number">20.7k</span></a> </div>
             </h3>
             <div class="tag-container">
                 <div class="tag open-source">Open-Source</div>
                 <div class="tag php">PHP</div>
                 <div class="tag js">JS</div> <br>
                 <div class="tag python">Python</div>
-            </div> <i class="far fa-star" aria-hidden="true"></i> <span id="star-count">28</span>
+            </div> <i class="far fa-star" aria-hidden="true"></i> <span id="star-count">loading...</span>
             <p class="description">🔧 User management panel with several themes &amp; API Examples</p>
         </div> <br>
             <div class="project-card" tabindex="11">
@@ -72,8 +73,7 @@
             </div>
         </a>
     </center>
-    <h3 id="clock"></h3> <audio id="audio" src="assets/sound/hitmarker.mp3"></audio>
-    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    <!-- <h3 id="clock"></h3> --> <audio id="audio" src="assets/sound/hitmarker.mp3"></audio>
     <script>
         const apiUrl = "https://api.github.com/repos/anditv21/panel";
         fetch(apiUrl)
