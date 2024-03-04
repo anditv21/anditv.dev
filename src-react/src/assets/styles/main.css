@@ -1,0 +1,371 @@
+:root {
+    --bg: rgba(33, 37, 41);
+    --bg-light: rgba(43, 48, 53);
+}
+
+/* Body and HTML styles */
+html,
+body {
+    background-color: var(--bg) !important;
+    color: white;
+}
+
+/* Header styles */
+h1 {
+    font-weight: 400;
+    font-size: 45px;
+    width: 300px;
+    color: white !important;
+    margin-bottom: 42px;
+}
+
+/* Avatar styles */
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 4px solid #121212;
+    max-width: 160px;
+    max-height: 160px;
+}
+
+/* Clock styles */
+#clock {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    max-width: 120px;
+    box-sizing: border-box;
+    margin: 0 5px 3% 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #clock {
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 4px 8px;
+        text-align: center;
+        font-size: 14px;
+        position: fixed;
+        top: 2%;
+        right: 1%;
+        max-width: 120px;
+        box-sizing: border-box;
+        margin: 0 5px 3% 5px;
+    }
+}
+
+/* Container styles */
+.me-container {
+    margin-top: 10%;
+}
+
+/* Domain label styles */
+h1 i {
+    color: #00a2ff;
+}
+
+.dot {
+    color: #e80860;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Bootstrap customization */
+.container {
+    background-color: var(--bg-light);
+    min-width: 100%;
+}
+
+.dropdown-menu,
+.dropdown-item {
+    background-color: var(--bg-light) !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdown-item {
+    color: white !important;
+    transition: background-color 0.3s;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(25, 28, 31, 0.9) !important;
+    color: white !important;
+}
+
+.nav-link-new {
+    color: rgba(0, 162, 255) !important;
+}
+
+.active {
+    background-color: rgba(0, 162, 255) !important;
+}
+
+/* Project card styles */
+.project-card {
+    background-color: #141617;
+    border: 1px solid rgba(119, 119, 119, 1);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    width: fit-content;
+    max-width: 20%;
+    min-width: 20% !important;
+    overflow: hidden;
+    margin-bottom: 1% !important;
+}
+
+.title {
+    font-weight: normal;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+.title a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.title a:hover {
+    color: purple;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.tag {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    font-size: small;
+    white-space: nowrap;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+    .project-card {
+        max-width: 30%;
+        min-width: 30% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 40%;
+        min-width: 40% !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .project-card {
+        max-width: 100%;
+        min-width: 100% !important;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        margin-bottom: 2%;
+        margin-right: 2%;
+        font-size: x-small;
+    }
+}
+
+/* Code snippet styles */
+.closed-source {
+    background-color: rgba(244, 63, 94);
+}
+
+.open-source {
+    background-color: rgb(22, 163, 74);
+}
+
+.js {
+    background-color: rgba(255, 255, 0, 1);
+    color: black;
+}
+
+.php {
+    background-color: rgba(79, 93, 149);
+    color: white;
+}
+
+.html {
+    background-color: rgba(174, 61, 33);
+    color: white;
+}
+
+.python {
+    background-color: rgba(53, 114, 165);
+    color: white;
+}
+
+.css {
+    background-color: rgba(86, 61, 124);
+    color: white;
+}
+
+.description {
+    font-size: small;
+    color: rgb(150, 150, 150);
+}
+
+/* Lines of code styles */
+.lines-of-code-container {
+    display: inline-flex;
+    font-size: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+.lines-of-code-tag,
+.lines-of-code-number {
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.lines-of-code-tag {
+    background-color: #616161;
+    color: #fff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.lines-of-code-number {
+    background-color: #09af00;
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Custom input and button styles */
+.custom-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+
+.custom-button {
+    background-color: #515251;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-bottom: 5% !important;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Info table styles */
+.info-table {
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+    padding: 8px;
+    border-bottom: 1px solid white;
+}
+
+.info-table th {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.info-table td {
+    color: white;
+}
+
+/* Built with footer styles */
+.built-with {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.built-with img {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.about-container
+{
+    margin-top: 3%;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .button-class {
+    background-color: rgba(43, 48, 53) !important;
+    border-radius: 50% !important;
+}
