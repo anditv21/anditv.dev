@@ -59,7 +59,7 @@ const HeaderComponent = () => {
                         }}
                     >
                         <span className="navbar-toggler-icon">
-                            {/* Use a white hamburger icon */}
+                            {}
                             &#9776;
                         </span>
                     </button>
