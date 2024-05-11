@@ -3,21 +3,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { changePageTitle } from '../../app/userControler';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const tabTitles = {
-    1: 'Home',
-    2: 'IP-Info',
-    3: 'Projects',
-    4: 'Webhook Deleter',
-    5: 'About',
-};
-
-const tabLinks = {
-    1: '/',
-    2: '/sites/ipinfo',
-    3: '/sites/projects',
-    4: '/sites/webhookdeleter',
-    5: '/sites/about',
-};
+const tabsData = [
+    { id: 1, title: 'Home', link: '/' },
+    { id: 2, title: 'IP-Info', link: '/sites/ipinfo' },
+    { id: 3, title: 'Projects', link: '/sites/projects' },
+    { id: 4, title: 'Webhook Deleter', link: '/sites/webhookdeleter' },
+    { id: 5, title: 'Windows-ISO', link: '/Windows-ISO' },
+    { id: 6, title: 'About', link: '/sites/about' },
+];
 
 const HeaderComponent = () => {
     const navigate = useNavigate();
@@ -25,8 +18,12 @@ const HeaderComponent = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
-        const activeTab = Object.values(tabLinks).indexOf(location.pathname) + 1;
-        changePageTitle(`anditv.dev | ${tabTitles[activeTab]}`);
+        const activeTab = tabsData.find(
+            (tab) => tab.link === location.pathname,
+        );
+        if (activeTab) {
+            changePageTitle(`anditv.dev | ${activeTab.title}`);
+        }
     }, [location.pathname]);
 
     const toggleMobileMenu = () => {
@@ -41,13 +38,20 @@ const HeaderComponent = () => {
     return (
         <div className="container">
             <header className="d-flex justify-content-between align-items-center py-3">
-            <Link to="/" className={`navbar-brand ${isMobileMenuOpen ? 'd-none' : ''}`}>
+                <Link
+                    to="/"
+                    className={`navbar-brand ${
+                        isMobileMenuOpen ? 'd-none' : ''
+                    }`}
+                >
                     anditv.dev
                 </Link>
 
                 <div className="d-lg-none">
                     <button
-                        className={`navbar-toggler ${isMobileMenuOpen ? 'collapsed' : ''}`}
+                        className={`navbar-toggler ${
+                            isMobileMenuOpen ? 'collapsed' : ''
+                        }`}
                         type="button"
                         onClick={toggleMobileMenu}
                         style={{
@@ -65,40 +69,48 @@ const HeaderComponent = () => {
                     </button>
                 </div>
 
-                <div className={`d-none d-lg-block ${isMobileMenuOpen ? 'd-none' : ''}`}>
+                <div
+                    className={`d-none d-lg-block ${
+                        isMobileMenuOpen ? 'd-none' : ''
+                    }`}
+                >
                     <ul className="nav nav-pills justify-content-center">
-                        {[1, 2, 3, 4, 5].map((tab) => (
-                            <li className="nav-item" key={tab}>
+                        {tabsData.map((tab) => (
+                            <li className="nav-item" key={tab.id}>
                                 <Link
-                                    to={tabLinks[tab]}
+                                    to={tab.link}
                                     className={
-                                        location.pathname === tabLinks[tab]
+                                        location.pathname === tab.link
                                             ? 'nav-link active'
                                             : 'nav-link nav-link-new'
                                     }
-                                    onClick={() => handleClick(tabLinks[tab])}
+                                    onClick={() => handleClick(tab.link)}
                                 >
-                                    {tabTitles[tab]}
+                                    {tab.title}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
 
-                <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
+                <div
+                    className={`collapse navbar-collapse ${
+                        isMobileMenuOpen ? 'show' : ''
+                    }`}
+                >
                     <ul className="navbar-nav d-lg-none">
-                        {[1, 2, 3, 4, 5].map((tab) => (
-                            <li className="nav-item" key={tab}>
+                        {tabsData.map((tab) => (
+                            <li className="nav-item" key={tab.id}>
                                 <Link
-                                    to={tabLinks[tab]}
+                                    to={tab.link}
                                     className={
-                                        location.pathname === tabLinks[tab]
+                                        location.pathname === tab.link
                                             ? 'nav-link active'
                                             : 'nav-link nav-link-new'
                                     }
-                                    onClick={() => handleClick(tabLinks[tab])}
+                                    onClick={() => handleClick(tab.link)}
                                 >
-                                    {tabTitles[tab]}
+                                    {tab.title}
                                 </Link>
                             </li>
                         ))}
