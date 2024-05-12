@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { changePageTitle } from '../../app/userControler';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../assets/styles/main.css';
 
 const tabsData = [
     { id: 1, title: 'Home', link: '/' },
@@ -16,6 +17,7 @@ const HeaderComponent = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => {
         const activeTab = tabsData.find(
@@ -26,6 +28,14 @@ const HeaderComponent = () => {
         }
     }, [location.pathname]);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 60000); // Update every minute
+
+        return () => clearInterval(interval);
+    }, []);
+
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -35,17 +45,24 @@ const HeaderComponent = () => {
         setMobileMenuOpen(false);
     };
 
+    const hours = currentTime.getHours() % 12 || 12;
+    const minutes = String(currentTime.getMinutes()).padStart(2, "0");
+    const ampm = currentTime.getHours() >= 12 ? "pm" : "am";
+
     return (
         <div className="container">
             <header className="d-flex justify-content-between align-items-center py-3">
-                <Link
-                    to="/"
-                    className={`navbar-brand ${
-                        isMobileMenuOpen ? 'd-none' : ''
-                    }`}
-                >
-                    anditv.dev
-                </Link>
+                <div>
+                    <Link
+                        to="/"
+                        className={`navbar-brand ${
+                            isMobileMenuOpen ? 'd-none' : ''
+                        }`}
+                    >
+                        anditv.dev
+                    </Link>
+                    <span id="clock">{`${hours}:${minutes} ${ampm}`}</span>
+                </div>
 
                 <div className="d-lg-none">
                     <button

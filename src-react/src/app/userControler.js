@@ -455,3 +455,13 @@ export function getISOLink(version, language) {
     window.open(isoLink, '_blank');
     return isoLink;
   }
+
+export function updateClock() {
+    const currentTime = new Date();
+    const hours = currentTime.getHours() % 12 || 12;
+    const minutes = String(currentTime.getMinutes()).padStart(2, "0");
+    const ampm = currentTime.getHours() >= 12 ? "pm" : "am";
+    const clockElement = document.getElementById("clock");
+    clockElement.textContent = `${hours} : ${minutes} ${ampm}`;
+    requestAnimationFrame(updateClock);
+}
