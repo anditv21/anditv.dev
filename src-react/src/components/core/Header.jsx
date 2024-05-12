@@ -8,7 +8,7 @@ const tabsData = [
     { id: 2, title: 'IP-Info', link: '/sites/ipinfo' },
     { id: 3, title: 'Projects', link: '/sites/projects' },
     { id: 4, title: 'Webhook Deleter', link: '/sites/webhookdeleter' },
-    { id: 5, title: 'Windows-ISO', link: '/Windows-ISO' },
+    { id: 5, title: 'Office-ISO', link: '/sites/office-iso' },
     { id: 6, title: 'About', link: '/sites/about' },
 ];
 

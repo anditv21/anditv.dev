@@ -448,3 +448,10 @@ export async function deleteWebhook(url) {
         throw new Error(`Error deleting webhook: ${error.message}`);
     }
 }
+
+export function getISOLink(version, language) {
+    const isoLink = `https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/${language}/${version}.img`;
+
+    window.open(isoLink, '_blank');
+    return isoLink;
+  }

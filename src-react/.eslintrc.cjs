@@ -18,5 +18,6 @@ module.exports = {
     ],
     "no-unused-vars": "off",
     "no-extra-semi": "off",
+    "react/prop-types": "off"
   },
 };
