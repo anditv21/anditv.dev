@@ -4,14 +4,19 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getISOLink } from '../../../app/userControler';
 
-
 const OfficeIsoComponent = () => {
-  const [version, setVersion] = useState('');
-  const [language, setLanguage] = useState('');
+  const [version, setVersion] = useState('not-selected');
+  const [language, setLanguage] = useState('not-selected');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getISOLink(version, language);
+
+    if (version === 'not-selected' || language === 'not-selected') {
+      alert('Please choose a version and language.');
+      return;
+    }
+
+    getISOLink(version.toString(), language.toString());
   };
 
   return (
@@ -22,6 +27,7 @@ const OfficeIsoComponent = () => {
         <div>
           <b>Select Office Version:</b><br/>
           <select id="version" value={version} onChange={(e) => setVersion(e.target.value)}>
+          <option value="not-selected">Select an Office version</option>
           <option value="HomeStudent2019Retail">Office 2019 Home & Student</option>
                 <option value="HomeBusiness2019Retail">Office 2019 Home & Business</option>
                 <option value="Professional2019Retail">Office 2019 Professional</option>
@@ -38,7 +44,8 @@ const OfficeIsoComponent = () => {
         <div>
         <b>Select Office Langauge:</b><br/>
           <select id="language" value={language} onChange={(e) => setLanguage(e.target.value)}>
-          <option value="en-EN">English</option>
+          <option value="not-selected">Select an Office language.</option>
+          <option value="en-US">English</option>
           <option value="de-DE">German</option>
           <option value="es-ES">Spanish (Spain)</option>
           <option value="fr-FR">French</option>
