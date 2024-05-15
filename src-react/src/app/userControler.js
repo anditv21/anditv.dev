@@ -31,21 +31,21 @@ export async function getIpInfo(ip) {
     const data = await response.json();
 
     return {
-        IP: data.ip || "N/A",
-        City: data.city || "N/A",
-        District: data.region_code || "N/A",
-        ZIP: data.postal || "N/A",
-        Region: data.region || "N/A",
-        Continent: data.continent || "N/A",
-        Country: data.country || "N/A",
-        Timezone: data.timezone?.id || "N/A",
-        ISP: data.connection?.isp || "N/A",
-        ORG: data.connection?.org || "N/A",
-        AS: data.connection?.asn || "N/A",
-        domain: data.connection?.domain || "N/A",
-        proxy: data.security?.proxy || "N/A",
-        hosting: data.security?.hosting || "N/A",
-        flag: data.flag?.img || "N/A",
+        IP: data.ip || 'N/A',
+        City: data.city || 'N/A',
+        District: data.region_code || 'N/A',
+        ZIP: data.postal || 'N/A',
+        Region: data.region || 'N/A',
+        Continent: data.continent || 'N/A',
+        Country: data.country || 'N/A',
+        Timezone: data.timezone?.id || 'N/A',
+        ISP: data.connection?.isp || 'N/A',
+        ORG: data.connection?.org || 'N/A',
+        AS: data.connection?.asn || 'N/A',
+        domain: data.connection?.domain || 'N/A',
+        proxy: data.security?.proxy || 'N/A',
+        hosting: data.security?.hosting || 'N/A',
+        flag: data.flag?.img || 'N/A',
         eu: eucheck(data.country),
         nato: natocheck(data.country),
         call: callcode(data.country),
@@ -430,7 +430,6 @@ export function changePageTitle(pageTitle) {
  */
 
 export async function deleteWebhook(url) {
-    // You can use any HTTP library (e.g., axios, fetch) to make the DELETE request
     try {
         const response = await fetch(url, {
             method: 'DELETE',
@@ -449,19 +448,23 @@ export async function deleteWebhook(url) {
     }
 }
 
+/**
+ * @description Opens a window to download the ISO file for the specified Office version and language.
+ * @param {string} version - The version of Office.
+ * @param {string} language - The language for the Office version.
+ */
 export function getISOLink(version, language) {
-    const isoLink = `https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/${language}/${version}.img`;
-
-    window.open(isoLink, '_blank');
-    return isoLink;
-  }
+    return window.open(
+        `https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/${language}/${version}.img`,
+        '_blank',
+    );
+}
 
 export function updateClock() {
     const currentTime = new Date();
-    const hours = currentTime.getHours() % 12 || 12;
-    const minutes = String(currentTime.getMinutes()).padStart(2, "0");
-    const ampm = currentTime.getHours() >= 12 ? "pm" : "am";
-    const clockElement = document.getElementById("clock");
-    clockElement.textContent = `${hours} : ${minutes} ${ampm}`;
+    const clockElement = document.getElementById('clock');
+    clockElement.textContent = `${currentTime.getHours() % 12 || 12} : ${String(
+        currentTime.getMinutes(),
+    ).padStart(2, '0')} ${currentTime.getHours() >= 12 ? 'pm' : 'am'}`;
     requestAnimationFrame(updateClock);
 }
