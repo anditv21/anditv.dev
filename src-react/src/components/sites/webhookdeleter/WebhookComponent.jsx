@@ -41,7 +41,7 @@ export default function WebhookComponent() {
                         aria-label="GitHub Link"
                         rel="noreferrer"
                     >
-                        <img className="avatar" src={Avatar} alt="avatar" />
+                        <img className="avatar" src={Avatar} alt="avatar" loading="lazy" />
                     </a>
                     <br />
                     <form onSubmit={handleSubmit}>

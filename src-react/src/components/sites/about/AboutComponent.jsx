@@ -64,17 +64,17 @@ export default function AboutComponent() {
             overlay={<Tooltip id="tooltip-discord">{tooltipTextDiscord}</Tooltip>}
           >
             <a target='_blank' href='https://discord.com/users/854024514781315082/' rel="noreferrer">
-              <img src={DiscordIcon} height="45" width="45" data-bs-toggle="tooltip" />
+              <img src={DiscordIcon} height="45" width="45" data-bs-toggle="tooltip" loading="lazy" />
             </a>
           </OverlayTrigger>
         </div>
 
         <div className="built-with">
           <h3 style={{ color: 'white' }}>This page is built with</h3>
-          <img src={ReactIcon} height="45" width="45" />
-          <img src={ViteIcon} height="45" width="45" />
-          <img src={JsIcon} height="45" width="45" />
-          <img src={HeartIcon} height="45" width="45" />
+          <img src={ReactIcon} height="45" width="45" loading="lazy" />
+          <img src={ViteIcon} height="45" width="45" loading="lazy" />
+          <img src={JsIcon} height="45" width="45" loading="lazy" />
+          <img src={HeartIcon} height="45" width="45" loading="lazy" />
         </div>
       </center>
     </>

@@ -32,7 +32,7 @@ export default function IpInfoComponent() {
                     aria-label="GitHub Link"
                     rel="noreferrer"
                 >
-                    <img className="avatar" src={Avatar} alt="avatar" />
+                    <img className="avatar" src={Avatar} alt="avatar" loading="lazy" />
                 </a>
                 <form onSubmit={handleSubmit}>
                     <input

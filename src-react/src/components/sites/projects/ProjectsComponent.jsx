@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getGithubStars } from '../../../app/userControler';
+import star from '../../../assets/images/icons/star.svg';
+import code from '../../../assets/images/icons/code.svg';
 
 export default function ProjectsComponent() {
     const [gitStars, setGitStats] = useState('0');
@@ -22,10 +24,12 @@ export default function ProjectsComponent() {
                     <div className="project-card" tabIndex="10">
                         <h3 className="title">
                             <a href="https://anditv.dev/sites/commits/">
-                                <i
-                                    className="fas fa-code"
-                                    aria-hidden="true"
-                                ></i>{' '}
+                                <img
+                                    src={code}
+                                    height="20"
+                                    width="20"
+                                    loading="lazy"
+                                />{' '}
                                 panel
                             </a>
                             <a
@@ -55,7 +59,7 @@ export default function ProjectsComponent() {
                             <div className="tag js">JS</div>
                             <div className="tag python">Python</div>
                         </div>
-                        <i className="far fa-star" aria-hidden="true"></i>
+                        <img src={star} height="20" width="20" loading="lazy" />
                         <span id="star-count">{gitStars}</span>
                         <p className="description">
                             🔧 User management panel with several themes &amp;

@@ -13,6 +13,7 @@ export default function MeInformationsComponent() {
                         aria-label="GitHub Link"
                         rel="noreferrer"
                     >
+                        <link rel="preload" href={Avatar} as="image" />
                         <img className="avatar" src={Avatar} alt="avatar" />
                     </a>
                     <br />
@@ -20,13 +21,6 @@ export default function MeInformationsComponent() {
                         anditv<i className="dot">.</i>
                         <i>dev</i>
                     </h1>
-                    <a href="https://discord.com/users/854024514781315082/">
-                        <img
-                            src="https://lanyard.cnrad.dev/api/854024514781315082?bg=0d1117"
-                            height="180"
-                            width="auto"
-                        />
-                    </a>
                 </div>
             </center>
         </>
