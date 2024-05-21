@@ -459,12 +459,3 @@ export function getISOLink(version, language) {
         '_blank',
     );
 }
-
-export function updateClock() {
-    const currentTime = new Date();
-    const clockElement = document.getElementById('clock');
-    clockElement.textContent = `${currentTime.getHours() % 12 || 12} : ${String(
-        currentTime.getMinutes(),
-    ).padStart(2, '0')} ${currentTime.getHours() >= 12 ? 'pm' : 'am'}`;
-    requestAnimationFrame(updateClock);
-}

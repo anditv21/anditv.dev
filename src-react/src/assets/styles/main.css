@@ -1,6 +1,6 @@
 :root {
-    --bg: rgba(33, 37, 41);
-    --bg-light: rgba(43, 48, 53);
+    --bg: rgba(22, 27, 40);
+    --nav: rgba(29, 35, 51);
 }
 
 /* Body and HTML styles */
@@ -28,45 +28,14 @@ h1 {
     max-height: 160px;
 }
 
-/* Clock styles */
-#clock {
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 4px 8px;
-    text-align: center;
-    font-size: 14px;
-    position: fixed;
-    top: 1.5%;
-    left: 4%;
-    max-width: 120px;
-    box-sizing: border-box;
-    margin: 0 5px 3% 5px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    #clock {
-        color: #fff;
-        border: 2px solid #fff;
-        padding: 4px 8px;
-        text-align: center;
-        font-size: 14px;
-        position: fixed;
-        top: 1.5%;
-        left: 4%;
-        max-width: 120px;
-        box-sizing: border-box;
-        margin: 0 5px 3% 5px;
-    }
-}
-
 /* Container styles */
 .me-container {
     margin-top: 10%;
 }
 
 /* Domain label styles */
-h1 i {
+h1 i,
+p i {
     color: #00a2ff;
 }
 
@@ -128,8 +97,8 @@ a {
 }
 
 .title {
-    font-weight: normal;
     font-size: medium;
+    font-weight: normal;
     margin-bottom: 20px;
 }
 
@@ -323,52 +292,10 @@ a {
     display: inline-block;
 }
 
-.about-container
-{
+.about-container {
     margin-top: 3%;
 }
 
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-
-  .button-class {
-    background-color: rgba(43, 48, 53) !important;
-    border-radius: 50% !important;
-}
 
 input[type="text"] {
     width: 100%;
@@ -378,7 +305,7 @@ input[type="text"] {
     border: 1px solid #555;
     outline: none;
   }
-  
+
   input[type="text"],
   select {
     width: 300px;
@@ -387,9 +314,8 @@ input[type="text"] {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
   }
-  
+
   input[type=button], input[type=submit], input[type=reset] {
     background-color: #515251;
     border: none;
@@ -399,4 +325,3 @@ input[type="text"] {
     margin: 4px 2px;
     cursor: pointer;
   }
-  

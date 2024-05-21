@@ -3,8 +3,6 @@ import { deleteWebhook } from '../../../app/userControler';
 import Avatar from '../../../assets/images/avatar.webp';
 import '../../../assets/styles/main.css';
 
-
-
 export default function WebhookComponent() {
     const [webhook, setWebhook] = useState('');
     const [message, setMessage] = useState(null);
@@ -35,49 +33,61 @@ export default function WebhookComponent() {
                 type="text/javascript"
             ></script>
             <center>
-                <div className="me-container">
-                    <a href="https://anditv.dev/" aria-label="main site">
+                <br />
+                <div className="content-center">
+                    <a
+                        href="https://github.com/anditv21/anditv.dev"
+                        target="_blank"
+                        aria-label="GitHub Link"
+                        rel="noreferrer"
+                    >
                         <img className="avatar" src={Avatar} alt="avatar" />
                     </a>
-                </div>
-                <br />
-                <form onSubmit={handleSubmit}>
-                    <input
-                        autoComplete="off"
-                        type="text"
-                        name="url"
-                        id="deleteurl"
-                        value={webhook}
-                        onChange={handleInputChange}
-                        className="custom-input"
-                        placeholder="Insert url here"
-                    />
                     <br />
-                    <button className="custom-button" type="submit">
-                        Delete Webhook
-                    </button>
-                </form>
-                {message && (
-                    <p
-                        style={{
-                            color: message.type === 'success' ? 'green' : 'red',
-                        }}
-                    >
-                        {message.content}
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            autoComplete="off"
+                            type="text"
+                            name="url"
+                            id="deleteurl"
+                            value={webhook}
+                            onChange={handleInputChange}
+                            className="custom-input"
+                            placeholder="Insert url here"
+                        />
+                        <br />
+                        <button className="custom-button" type="submit">
+                            Delete Webhook
+                        </button>
+                    </form>
+                    {message && (
+                        <p
+                            style={{
+                                color:
+                                    message.type === 'success'
+                                        ? 'green'
+                                        : 'red',
+                            }}
+                        >
+                            {message.content}
+                        </p>
+                    )}
+                    <p style={{ color: 'white' }}>
+                        What is a{' '}
+                        <a
+                            style={{
+                                color: 'aqua',
+                                textDecoration: 'underline',
+                            }}
+                            href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            discord webhook?
+                        </a>
                     </p>
-                )}
-                <p style={{ color: 'white' }}>
-                    What is a{' '}
-                    <a
-                        style={{ color: 'aqua', textDecoration: 'underline' }}
-                        href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        discord webhook?
-                    </a>
-                </p>
-                <br />
+                    <br />
+                </div>
             </center>
         </>
     );

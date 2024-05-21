@@ -1,2 +1,2 @@
 # anditv.dev
-<img src="https://i.ibb.co/mB5Yf1p/chrome-y-SZNXu-TSng89665.png">
+<img src="https://i.ibb.co/F3xd1Vy/brave-gkxmid-Knxn.png">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getIpInfo } from '../../../app/userControler';
 import Avatar from '../../../assets/images/avatar.webp';
-import IpIformationComponent from '../../util/ipInformations';
+import IpInformationComponent from '../../util/ipInformations';
 import '../../../assets/styles/main.css';
 
 export default function IpInfoComponent() {
@@ -23,14 +23,17 @@ export default function IpInfoComponent() {
     };
 
     return (
-        <>
-            <center>
-                <div className="me-container">
-                    <a href="https://anditv.dev/" aria-label="main site">
-                        <img className="avatar" src={Avatar} alt="avatar" />
-                    </a>
-                </div>
-                <br />
+        <center>
+            <br />
+            <div className="content-center">
+                <a
+                    href="https://github.com/anditv21/anditv.dev"
+                    target="_blank"
+                    aria-label="GitHub Link"
+                    rel="noreferrer"
+                >
+                    <img className="avatar" src={Avatar} alt="avatar" />
+                </a>
                 <form onSubmit={handleSubmit}>
                     <input
                         autoComplete="off"
@@ -47,11 +50,11 @@ export default function IpInfoComponent() {
                     </button>
                 </form>
                 <br />
-            </center>
 
-            {ipInformations && (
-                <IpIformationComponent ipInformations={ipInformations} />
-            )}
-        </>
+                {ipInformations && (
+                    <IpInformationComponent ipInformations={ipInformations} />
+                )}
+            </div>
+        </center>
     );
 }
