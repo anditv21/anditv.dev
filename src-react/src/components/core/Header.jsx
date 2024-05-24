@@ -7,11 +7,10 @@ import '../../assets/styles/main.css';
 const tabsData = [
     { id: 1, title: 'Home', link: '/' },
     { id: 2, title: 'IP-Info', link: '/sites/ipinfo' },
-    { id: 3, title: 'Projects', link: '/sites/projects' },
-    { id: 4, title: 'Webhook Deleter', link: '/sites/webhookdeleter' },
-    { id: 5, title: 'Office-ISO', link: '/sites/office-iso' },
-    { id: 6, title: 'About', link: '/sites/about' },
-];
+    { id: 3, title: 'Webhook Deleter', link: '/sites/webhookdeleter' },
+    { id: 4, title: 'Office-ISO', link: '/sites/office-iso' },
+    { id: 5, title: 'About', link: '/sites/about' }
+]
 
 const HeaderComponent = () => {
     const navigate = useNavigate();
