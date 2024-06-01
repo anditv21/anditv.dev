@@ -4,7 +4,6 @@ import star from '../../assets/images/icons/star.svg';
 import code from '../../assets/images/icons/code.svg';
 import { getGithubStars } from '../../app/userControler';
 
-
 export default function MeInformationsComponent() {
     const [gitStars, setGitStats] = useState('0');
 
@@ -30,7 +29,13 @@ export default function MeInformationsComponent() {
                         rel="noreferrer"
                     >
                         <link rel="preload" href={Avatar} as="image" />
-                        <img className="avatar" src={Avatar} alt="avatar" />
+                        <img
+                            className="avatar"
+                            src={Avatar}
+                            alt="avatar"
+                            width="150"
+                            height="150"
+                        />
                     </a>
                     <br />
                     <h1>
@@ -41,7 +46,7 @@ export default function MeInformationsComponent() {
             </center>
             <center>
                 <div className="projects-sector content-center">
-                    <div className="project-card" tabIndex="10">
+                    <div className="project-card">
                         <h3 className="title">
                             <a href="https://anditv.dev/sites/commits/">
                                 <img
@@ -49,6 +54,7 @@ export default function MeInformationsComponent() {
                                     height="20"
                                     width="20"
                                     loading="lazy"
+                                    alt="code icon"
                                 />{' '}
                                 panel
                             </a>
@@ -79,14 +85,20 @@ export default function MeInformationsComponent() {
                             <div className="tag js">JS</div>
                             <div className="tag python">Python</div>
                         </div>
-                        <img src={star} height="20" width="20" loading="lazy" />
+                        <img
+                            src={star}
+                            height="20"
+                            width="20"
+                            loading="lazy"
+                            alt="star icon"
+                        />
                         <span id="star-count">{gitStars}</span>
                         <p className="description">
                             🔧 User management panel with several themes &amp;
                             API Examples
                         </p>
                     </div>
-                    <div className="project-card" tabIndex="11">
+                    <div className="project-card">
                         <h3 className="title">
                             <i className="fas fa-code" aria-hidden="true"></i>
                             <a
