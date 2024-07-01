@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export async function getGithubStars() {
+export async function getGithubStars(repoName) {
     try {
         const getGitStats = await axios.get(
-            'https://api.github.com/repos/anditv21/panel',
+            `https://api.github.com/repos/anditv21/${repoName}`,
         );
 
         if (getGitStats.status !== 200) {
