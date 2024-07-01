@@ -211,15 +211,10 @@ a {
         sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
-.lines-of-code-tag,
-.lines-of-code-number {
+.lines-of-code-tag {
     padding: 2px 6px;
     font-size: 12px;
     font-weight: 500;
-    border-radius: 4px;
-}
-
-.lines-of-code-tag {
     background-color: #616161;
     color: #fff;
     border-top-left-radius: 4px;
@@ -227,6 +222,9 @@ a {
 }
 
 .lines-of-code-number {
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
     background-color: #09af00;
     color: #fff;
     border-top-right-radius: 4px;
@@ -296,27 +294,28 @@ a {
     margin-top: 3%;
 }
 
-
-input[type="text"] {
+input[type='text'] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid #555;
     outline: none;
-  }
+}
 
-  input[type="text"],
-  select {
+input[type='text'],
+select {
     width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
 
-  input[type=button], input[type=submit], input[type=reset] {
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
     background-color: #515251;
     border: none;
     color: white;
@@ -324,4 +323,4 @@ input[type="text"] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
