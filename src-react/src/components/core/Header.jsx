@@ -13,6 +13,16 @@ const tabsData = [
     { id: 6, title: 'About', link: '/sites/about' }
 ];
 
+const COOKIE_NAME = 'clickCount';
+
+const getClickCountFromCookie = () => {
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(`${COOKIE_NAME}=`))
+        ?.split('=')[1];
+    return cookieValue ? parseInt(cookieValue, 10) : 0;
+};
+
 const HeaderComponent = () => {
     const navigate = useNavigate();
     const location = useLocation();
