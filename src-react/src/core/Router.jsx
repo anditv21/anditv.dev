@@ -5,6 +5,7 @@ import IP_Info from '../elements/sites/ipinfo/IPInfo';
 import WebhookDeleter from '../elements/sites/webhookdeleter/WebhookDeleter';
 import About from '../elements/sites/about/About';
 import OfficeISO from '../elements/sites/office-iso/Office';
+import Schmandi from '../elements/sites/schmandi/Schmandi.jsx';
 import { useEffect } from 'react';
 import AudioHitMarker from '../components/core/Audio';
 
@@ -48,6 +49,11 @@ export default function RouterManager() {
                     <Route
                         path="/sites/office-iso"
                         element={<OfficeISO />}
+                        errorElement={<ErrorPage />}
+                    />
+                    <Route
+                        path="/projects/schmandi"
+                        element={<Schmandi />}
                         errorElement={<ErrorPage />}
                     />
                 </Routes>

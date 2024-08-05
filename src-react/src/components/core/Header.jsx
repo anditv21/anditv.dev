@@ -6,8 +6,8 @@ import '../../assets/styles/main.css';
 
 const tabsData = [
     { id: 1, title: 'Home', link: '/' },
-    { id: 2, title: 'IP-Info', link: '/sites/ipinfo' },
-    { id: 3, title: 'Webhook Deleter', link: '/sites/webhookdeleter' },
+    { id: 2, title: 'Discord Bot', link: '/projects/schmandi' },
+    { id: 3, title: 'IP-Info', link: '/sites/ipinfo' },
     { id: 4, title: 'Office-ISO', link: '/sites/office-iso' },
     { id: 5, title: 'Uptime', link: 'https://uptime.anditv.dev', external: true },
     { id: 6, title: 'About', link: '/sites/about' }

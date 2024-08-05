@@ -265,6 +265,22 @@ a {
     transition: background-color 0.3s ease;
 }
 
+/* .custom-button {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.custom-button:hover {
+    background-color: #4752C4;
+}
+ */
+
 /* Info table styles */
 .info-table {
     border-collapse: collapse;
@@ -304,6 +320,14 @@ a {
     margin-top: 3%;
 }
 
+/* .schmandi-about {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+} */
+
+
 input[type='text'] {
     width: 100%;
     padding: 12px 20px;
@@ -333,4 +357,86 @@ input[type='reset'] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+/* Role Select Container */
+.role-select-container {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    max-width: 80em;
+    padding: 2em;
+    border-radius: 12px;
+    background-color: rgba(25, 28, 32, 0.8);
+    backdrop-filter: blur(5em);
+}
+
+.role-select-container img {
+    max-width: 20em;
+    width: 40vw;
+    height: auto;
+    z-index: 5;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1em 2em 0px;
+}
+
+.role-select-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.role-select-content h1 {
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin: 0;
+    padding-right: 7%;
+    align-self: flex-start;
+}
+
+.role-select-content span {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    padding-right: 42%;
+    font-weight: lighter;
+}
+
+.role-select-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-left: 3%;
+}
+
+.role-select-buttons button {
+    background-color: #5865F2;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.role-select-buttons button:hover {
+    background-color: #4752C4;
+}
+
+@media (max-width: 40em) {
+    .role-select-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role-select-container img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .role-select-content {
+        align-items: center;
+        text-align: center;
+    }
 }
