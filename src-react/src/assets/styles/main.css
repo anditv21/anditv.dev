@@ -83,17 +83,26 @@ a {
 }
 
 /* Project card styles */
+.projects-sector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+}
+
+/* Project card styles */
 .project-card {
     background-color: #141617;
     border: 1px solid rgba(119, 119, 119, 1);
     border-radius: 10px;
     color: white;
     padding: 20px;
-    width: fit-content;
-    max-width: 20%;
-    min-width: 20% !important;
-    overflow: hidden;
-    margin-bottom: 1% !important;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
+    min-width: 250px;
 }
 
 .title {
@@ -127,7 +136,7 @@ a {
     margin-bottom: 3%;
     margin-right: 5%;
     font-size: small;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .tag-alt {
@@ -137,25 +146,25 @@ a {
     text-transform: uppercase;
     margin-bottom: 3%;
     font-size: small;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 /* Media queries for responsive design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .project-card {
-        max-width: 30%;
-        min-width: 30% !important;
+        max-width: 33%;
+        min-width: 33% !important;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .project-card {
-        max-width: 40%;
-        min-width: 40% !important;
+        max-width: 50%;
+        min-width: 50% !important;
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
     .project-card {
         max-width: 100%;
         min-width: 100% !important;
@@ -205,6 +214,11 @@ a {
 
 .css {
     background-color: rgba(86, 61, 124);
+    color: white;
+}
+
+.go {
+    background-color: rgba(0, 173, 216);
     color: white;
 }
 
@@ -327,7 +341,6 @@ a {
     line-height: 1.5;
 } */
 
-
 input[type='text'] {
     width: 100%;
     padding: 12px 20px;
@@ -410,8 +423,8 @@ input[type='reset'] {
 }
 
 .role-select-buttons button {
-    background-color: #5865F2;
-    color: #FFFFFF;
+    background-color: #5865f2;
+    color: #ffffff;
     border: none;
     padding: 0.5em 1em;
     border-radius: 4px;
@@ -420,7 +433,7 @@ input[type='reset'] {
 }
 
 .role-select-buttons button:hover {
-    background-color: #4752C4;
+    background-color: #4752c4;
 }
 
 @media (max-width: 40em) {
@@ -449,7 +462,6 @@ input[type='reset'] {
     font-weight: 500;
     text-align: center;
 }
-
 
 @media (max-width: 767px) {
     .title {

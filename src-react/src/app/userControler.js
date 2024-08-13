@@ -1,21 +1,30 @@
 import axios from 'axios';
 
-export async function getGithubStars(repoName) {
+/**
+ * @description Fetches the number of stars for a given GitHub repository.
+ * @argument {string} repoOwner - The owner of the repository.
+ * @argument {string} repoName - The name of the repository.
+ * @returns {Promise<number | false>} The number of stars or `false` if the request fails.
+ */
+export async function getGithubStars(repoOwner, repoName) {
     try {
-        const getGitStats = await axios.get(
-            `https://api.github.com/repos/anditv21/${repoName}`,
+        const response = await axios.get(
+            `https://api.github.com/repos/${repoOwner}/${repoName}`,
         );
 
-        if (getGitStats.status !== 200) {
+        if (response.status !== 200) {
             return false;
         }
 
-        return getGitStats.data.stargazers_count;
+        return response.data.stargazers_count;
     } catch (err) {
+        console.error(
+            `Error fetching stars for ${repoOwner}/${repoName}:`,
+            err,
+        );
         return false;
     }
 }
-
 /**
  * @description get information about a ip address
  * @argument {string} ip
