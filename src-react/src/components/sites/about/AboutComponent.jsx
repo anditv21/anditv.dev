@@ -98,9 +98,9 @@ export default function AboutComponent() {
 
                 <div className="built-with">
                     <h3 style={{ color: 'white' }}>This page is built with</h3>
-                    <img src={ReactIcon} height="45" width="45" loading="lazy" />
-                    <img src={ViteIcon} height="45" width="45" loading="lazy" />
-                    <img src={JsIcon} height="45" width="45" loading="lazy" />
+                    <a href='https://react.dev/' target='_blank' rel="noreferrer"><img src={ReactIcon} height="45" width="45" loading="lazy" /></a>
+                    <a href='https://vite.dev/' target='_blank' rel="noreferrer"><img src={ViteIcon} height="45" width="45" loading="lazy" /></a>
+                    <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank' rel="noreferrer"><img src={JsIcon} height="45" width="45" loading="lazy" /></a>
                     <img src={HeartIcon} height="45" width="45" loading="lazy" />
                 </div>
             </center>

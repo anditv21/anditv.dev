@@ -72,7 +72,7 @@ export default function MeInformationsComponent() {
                 <div className="projects-sector content-center">
                     <div className="project-card">
                         <h3 className="title">
-                            <a href="https://anditv.dev/sites/commits/">
+                            <a href="https://github.com/anditv21/panel">
                                 <img
                                     src={code}
                                     height="20"
@@ -134,11 +134,6 @@ export default function MeInformationsComponent() {
                                 />{' '}
                                 schmandi
                             </a>
-                            <a
-                                target="_blank"
-                                href="https://github.com/anditv21/panel/blob/main/count.py#L1"
-                                rel="noreferrer"
-                            ></a>
                             <br />
                             <div className="lines-of-code-container">
                                 <span className="lines-of-code-tag">lines</span>
