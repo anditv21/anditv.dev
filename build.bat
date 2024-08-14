@@ -1,0 +1,1 @@
+cd src-react && npm run build && explorer . && pause
