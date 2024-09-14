@@ -158,42 +158,12 @@ export default function MeInformationsComponent() {
                         />
                         <span id="star-count">{schmandiStars}</span>
                         <p className="description">
-                            Just another discord.py bot
+                            Public version of schmandi discord bot
                         </p>
                     </div>
                     <br />
                 </div>
                 <div className="projects-sector content-center">
-                    <div className="project-card">
-                        <h3 className="title">
-                            <i className="fas fa-code" aria-hidden="true"></i>
-                            <a
-                                target="_blank"
-                                href="https://anditv.dev/sites/average"
-                                rel="noreferrer"
-                            >
-                                average
-                            </a>
-                            <br />
-                            <div className="lines-of-code-container">
-                                <span className="lines-of-code-tag">lines</span>
-                                <span className="lines-of-code-number">
-                                    25.7k
-                                </span>
-                            </div>
-                        </h3>
-                        <div className="tag-container">
-                            <div className="tag closed-source">
-                                closed-source
-                            </div>
-                            <div className="tag php">PHP</div>
-                            <div className="tag js">JS</div>
-                            <div className="tag python">Python</div>
-                        </div>
-                        <p className="description">
-                            Websites &amp; Bot of average
-                        </p>
-                    </div>
                     <div className="project-card">
                         <h3 className="title">
                             <i className="fas fa-code" aria-hidden="true"></i>
@@ -224,9 +194,8 @@ export default function MeInformationsComponent() {
                             A basic sharex image/video uploader with discord
                             embeds. With GO or PHP server
                         </p>
+                        <br/>
                     </div>
-                </div>
-                <div className="projects-sector content-center">
                     <div className="project-card">
                         <h3 className="title">
                             <a href="https://github.com/theunkowndude/leonardoWrapper">
@@ -267,48 +236,7 @@ export default function MeInformationsComponent() {
                             Image Generation with Leonardo Library
                         </p>
                     </div>
-                    <div className="project-card">
-                        <h3 className="title">
-                            <a href="https://anditv.dev/sites/commits/">
-                                <img
-                                    src={code}
-                                    height="20"
-                                    width="20"
-                                    loading="lazy"
-                                    alt="code icon"
-                                />{' '}
-                                simple-commit-log
-                            </a>
-                            <a target="_blank" href="" rel="noreferrer"></a>
-                            <br />
-                            <div className="lines-of-code-container">
-                                <span className="lines-of-code-tag">lines</span>
-                                <span className="lines-of-code-number">
-                                    196
-                                </span>
-                            </div>
-                        </h3>
-                        <div className="tag-container">
-                            <div className="tag-alt open-source">
-                                Open-Source
-                            </div>
-                            &nbsp;
-                            <div className="tag-alt php">PHP</div>
-                        </div>
-                        <img
-                            src={star}
-                            height="20"
-                            width="20"
-                            loading="lazy"
-                            alt="star icon"
-                        />
-                        <span id="star-count">{commitLogStars}</span>
-                        <p className="description">
-                            Simple PHP script to retrieve and display latest
-                            commits for a public GitHub repo.
-                        </p>
                     </div>
-                </div>
             </center>
         </>
     );
