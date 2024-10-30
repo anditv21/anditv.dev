@@ -13,22 +13,13 @@ export default function MeInformationsComponent() {
     const [panelStars, setPanelStars] = useState('0');
     const [schmandiStars, setSchmandiStars] = useState('0');
     const [leonardoWrapperStars, setLeonardoWrapperStars] = useState('0');
-    const [commitLogStars, setCommitLogStars] = useState('0');
 
     useEffect(() => {
         const repositories = [
             { owner: 'anditv21', name: 'panel', setStars: setPanelStars },
             { owner: 'anditv21', name: 'schmandi', setStars: setSchmandiStars },
-            {
-                owner: 'theunkowndude',
-                name: 'leonardoWrapper',
-                setStars: setLeonardoWrapperStars,
-            },
-            {
-                owner: 'dev-hoehle',
-                name: 'simple-commit-log',
-                setStars: setCommitLogStars,
-            },
+            { owner: 'theunkowndude', name: 'leonardoWrapper', setStars: setLeonardoWrapperStars},
+            { owner: 'dev-hoehle', name: 'schmadi', setStars: setSchmandiStars},
         ];
 
         const fetchAllStars = async () => {
