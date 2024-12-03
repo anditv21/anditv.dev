@@ -463,8 +463,18 @@ export async function deleteWebhook(url) {
  * @param {string} language - The language for the Office version.
  */
 export function getISOLink(version, language) {
-    return window.open(
-        `https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/${language}/${version}.img`,
+    let baseUrl;
+
+    // Determine the correct base URL based on the year
+    if (version.includes('2013')) {
+        baseUrl = "http://officecdn.microsoft.com/db/39168D7E-077B-48E7-872C-B232C3E72675/media/";
+    } else {
+        baseUrl = "https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/";
+    }
+
+    // Open the download link based on the version and language
+    window.open(
+        `${baseUrl}${language}/${version}.img`,
         '_blank',
     );
 }
