@@ -60,6 +60,8 @@ export default function MeInformationsComponent() {
                 </div>
             </center>
             <center>
+            <p>The ability to speak does not make you intelligent.</p>
+            <br />
                 <div className="projects-sector content-center">
                     <div className="project-card">
                         <h3 className="title">
