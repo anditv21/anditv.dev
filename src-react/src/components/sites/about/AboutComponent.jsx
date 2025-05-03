@@ -86,7 +86,7 @@ export default function AboutComponent() {
                         placement="top"
                         overlay={<Tooltip id="tooltip-discord">{tooltipTextDiscord}</Tooltip>}
                     >
-                        <a target='_blank' href='https://discord.com/users/854024514781315082/' rel="noreferrer">
+                        <a target='_blank' href='discord://-/users/1368283238283345991' rel="noreferrer">
                             <img src={DiscordIcon} height="45" width="45" data-bs-toggle="tooltip" loading="lazy" />
                         </a>
                     </OverlayTrigger>
