@@ -34,8 +34,7 @@ const OfficeIsoComponent = () => {
                             <select
                                 id="year"
                                 value={year}
-                                onChange={(e) => setYear(e.target.value)}
-                            >
+                                onChange={(e) => setYear(e.target.value)}>
                                 <option value="not-selected">Select an Office year</option>
                                 <option value="2013">Office 2013</option>
                                 <option value="2019">Office 2019</option>
@@ -48,11 +47,8 @@ const OfficeIsoComponent = () => {
                             <select
                                 id="version"
                                 value={version}
-                                onChange={(e) => setVersion(e.target.value)}
-                            >
+                                onChange={(e) => setVersion(e.target.value)}>
                                 <option value="not-selected">Select an Office version</option>
-
-
                                 {year === '2013' && (
                                     <>
                                         <option value="HomeStudent2013Retail">Office 2013 Home & Student</option>
@@ -97,9 +93,8 @@ const OfficeIsoComponent = () => {
                             <select
                                 id="language"
                                 value={language}
-                                onChange={(e) => setLanguage(e.target.value)}
-                            >
-                                <option value="not-selected">Select an Office language.</option>
+                                onChange={(e) => setLanguage(e.target.value)}>
+                                <option value="not-selected">Select an Office language</option>
                                 <option value="en-US">English</option>
                                 <option value="de-DE">German</option>
                                 <option value="es-ES">Spanish (Spain)</option>
